@@ -1,6 +1,10 @@
 #include "kernel/types.h"
 #include "user/user.h"
 
+
+#define RD 0
+#define WR 1
+
 int main(int argc, char *argv[])
 {
 
@@ -9,6 +13,10 @@ int main(int argc, char *argv[])
     fprintf(2, "Usage: primes\n");
     exit(1);
   }
+
+  int p[2];
+  pipe(p);
+
 
   exit(0);
 }
